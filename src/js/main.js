@@ -1,5 +1,5 @@
 require('../css/main.scss');
 
-import print from './module';
+import initEventHandlers from './rspdisplay';
 
-print('it works well!');
+initEventHandlers();
