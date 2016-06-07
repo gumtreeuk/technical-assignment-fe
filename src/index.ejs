@@ -7,6 +7,49 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<h1>you are ready to go! :)</h1>
+   <h1>ROCK SCISSORS PAPER</h1>
+   <div>
+     <label for="game-mode">Choose Game Mode</label>
+     <select id="game-mode">
+         <option value="">Select Mode</option>
+         <option value="play">You Vs Computer</option>
+         <option value="simulate">Computer Vs Computer</option>
+     </select>
+    </div>
+    <div class="user-mode player-container"  style="display:none">
+        <div id="user-choices" class="user-section block">
+            <h2>YOU</h2>
+            <div>
+                <h3>Select a value</h3>
+                <ul>
+                    <li><button  class="btn" data-value="0" type="button">Rock</button></li>
+                    <li><button  class="btn" data-value="1" type="button">Paper</button></li>
+                    <li><button  class="btn" data-value="2" type="button">Scissors</button></li>
+                </ul>
+                <div class="user-choice">Your choice: <span class="class" id="user-choice"></span></div>
+            </div>
+        </div>
+        <div class="block">
+            <h2>COMPUTER</h2>
+            <div>Computer choice: <span  class="choice" id="computer"></span></div>
+        </div>
+    </div>
+   <div class="automatic-mode player-container" style="display:none">
+        <div class="block">
+            <h2>COMPUTER 1</h2>
+            <div>Computer 1 choice: <span class="choice" id="computer1"></span></div>
+        </div>
+       <div class="block">
+           <h2>COMPUTER 2</h2>
+           <div>Computer 2 choice: <span class="choice" id="computer2"></span></div>
+       </div>
+       <div class="bottom">
+           <button id="simulate" class="btn" type="button">Simulate</button>       
+       </div>
+    </div>    
+   <div class="result-section bottom" style="display:none">
+       <h2>RESULT</h2>
+       <div><span id="result"></span></div>
+   </div>
 </body>
 </html>
