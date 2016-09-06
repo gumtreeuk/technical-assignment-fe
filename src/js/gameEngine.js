@@ -1,9 +1,18 @@
+/**
+ * Available weapons
+ * You can add new weapons in order to exetend this game eg.: ['rock', 'paper', 'scissor', 'spock', 'lizard']
+ * @type {Array}
+ */
 export const weapons = ['rock', 'paper', 'scissor'];
 
+/**
+ * Possible match results
+ * @type {Object}
+ */
 export const results = {
-	'TIE': 'TIE',
-	'WIN': 'WIN',
-	'LOOSE': 'LOOSE'
+    'TIE': 'TIE',
+    'WIN': 'WIN',
+    'LOSE': 'LOSE'
 };
 
 /**
@@ -11,8 +20,8 @@ export const results = {
  * @return {string}
  */
 export function getRandomWeapon() {
-	let rnd = Math.floor(Math.random() * weapons.length);
-	return weapons[rnd];
+    let rnd = Math.floor(Math.random() * weapons.length);
+    return weapons[rnd];
 }
 
 /**
@@ -22,5 +31,24 @@ export function getRandomWeapon() {
  * @return {string} 
  */
 export function play(playerA, playerB){
-	return (playerA === playerB) ? results.TIE : results.WIN;
+    const weaponsLength = weapons.length;
+    const playerAScore = weapons.indexOf(playerA.toLowerCase());
+    const playerBScore = weapons.indexOf(playerB.toLowerCase());
+    let result;
+    
+    // do calc to define winner
+    let resultMatch = (weaponsLength + playerAScore - playerBScore) % weaponsLength;
+
+    if(resultMatch == 0){ 
+        // if the rest is 0 they put the same weapon
+        result = results.TIE;
+    }else if(resultMatch % 2 == 1){
+        // if the rest is odd then playerA wins
+        result = results.WIN;
+    }else{
+        // else playerB wins 
+        result = results.LOSE;
+    }
+
+    return result;
 }
