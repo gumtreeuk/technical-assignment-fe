@@ -52,3 +52,14 @@ export function play(playerA, playerB){
 
     return result;
 }
+
+/**
+ * Demonstrate a match
+ * @return {string}
+ */
+export function playDemo(){
+    const playerA = getRandomWeapon();
+    const playerB = getRandomWeapon();
+
+    return play(playerA, playerB);
+}

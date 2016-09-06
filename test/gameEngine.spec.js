@@ -12,19 +12,19 @@ describe('game engine', () => {
 
 	describe('playerA choosing paper', () => {
 		it('should tie if both choose paper', () => {
-			var result = gameEngine.play('paper', 'paper');
+			let result = gameEngine.play('paper', 'paper');
 
 			expect(result).to.be.equal(gameEngine.results.TIE);
 		});
 
 		it('should win if plays paper against rock', () => {
-			var result = gameEngine.play('paper', 'rock');
+			let result = gameEngine.play('paper', 'rock');
 
 			expect(result).to.be.equal(gameEngine.results.WIN);
 		});
 
 		it('should lose if plays paper against scissor', () => {
-			var result = gameEngine.play('paper', 'scissor');
+			let result = gameEngine.play('paper', 'scissor');
 
 			expect(result).to.be.equal(gameEngine.results.LOSE);
 		});
@@ -32,19 +32,19 @@ describe('game engine', () => {
 
 	describe('playerA choosing rock', () => {
 		it('should tie if both choose rock', () => {
-			var result = gameEngine.play('rock', 'rock');
+			let result = gameEngine.play('rock', 'rock');
 
 			expect(result).to.be.equal(gameEngine.results.TIE);
 		});
 
 		it('should win if plays rock against scissor', () => {
-			var result = gameEngine.play('rock', 'scissor');
+			let result = gameEngine.play('rock', 'scissor');
 
 			expect(result).to.be.equal(gameEngine.results.WIN);
 		});
 
 		it('should lose if plays rock against paper', () => {
-			var result = gameEngine.play('rock', 'paper');
+			let result = gameEngine.play('rock', 'paper');
 
 			expect(result).to.be.equal(gameEngine.results.LOSE);
 		});
@@ -52,21 +52,30 @@ describe('game engine', () => {
 
 	describe('playerA choosing scissor', () => {
 		it('should tie if both choose scissor', () => {
-			var result = gameEngine.play('scissor', 'scissor');
+			let result = gameEngine.play('scissor', 'scissor');
 
 			expect(result).to.be.equal(gameEngine.results.TIE);
 		});
 
 		it('should win if plays scissor against paper', () => {
-			var result = gameEngine.play('scissor', 'paper');
+			let result = gameEngine.play('scissor', 'paper');
 
 			expect(result).to.be.equal(gameEngine.results.WIN);
 		});
 
 		it('should lose if plays scissor against rock', () => {
-			var result = gameEngine.play('scissor', 'rock');
+			let result = gameEngine.play('scissor', 'rock');
 
 			expect(result).to.be.equal(gameEngine.results.LOSE);
+		});
+	});
+
+	describe('demo battle', () => {
+		it('should create random match to demonstrate', () => {
+			let result = gameEngine.playDemo();
+			let resultExists = Object.keys(gameEngine.results).indexOf(result) !== -1;
+
+			expect(resultExists).to.be.true;
 		});
 	});
 });
