@@ -31,26 +31,40 @@ export function getRandomWeapon() {
  * @return {string} 
  */
 export function play(playerA, playerB){
+    if(!playerA){
+        return {
+            'error': 'PlayerA should select a weapon'
+        }
+    }
+
+    if(!playerB){
+        playerB = getRandomWeapon();
+    }
+
     const weaponsLength = weapons.length;
     const playerAScore = weapons.indexOf(playerA.toLowerCase());
     const playerBScore = weapons.indexOf(playerB.toLowerCase());
-    let result;
+    
+    let response = {
+        'playerA': playerA,
+        'playerB': playerB
+    };
     
     // do calc to define winner
     let resultMatch = (weaponsLength + playerAScore - playerBScore) % weaponsLength;
 
     if(resultMatch == 0){ 
         // if the rest is 0 they put the same weapon
-        result = results.TIE;
+        response['result'] = results.TIE;
     }else if(resultMatch % 2 == 1){
         // if the rest is odd then playerA wins
-        result = results.WIN;
+        response['result'] = results.WIN;
     }else{
         // else playerB wins 
-        result = results.LOSE;
+        response['result'] = results.LOSE;
     }
 
-    return result;
+    return response;
 }
 
 /**

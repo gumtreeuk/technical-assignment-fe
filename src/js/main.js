@@ -1,5 +1,5 @@
 require('../css/main.scss');
 
-import print from './module';
+import setupGame from './gameHandler';
 
-print('it works well!');
+setupGame();
