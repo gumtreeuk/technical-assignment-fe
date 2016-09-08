@@ -42,6 +42,9 @@ module.exports = {
 			exclude: [/node_modules/]
 		}],
 		loaders: [{
+			test: /\.(jpe?g|png|gif|svg)$/i, 
+			loader: 'file?img?progressive=true'
+		},{
 			test: /\.css$/,
 			loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
 		},{

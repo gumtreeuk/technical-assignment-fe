@@ -6,6 +6,12 @@ const playerB = new Player('playerB', 'playerB');
 
 export default function setupGame(){
     const weaponsDOM = document.getElementById('weapons');
+    gameEngine.weapons.forEach(weapon => {
+        let a = document.createElement('a');
+        a.href = getWeaponHashFromName(weapon);
+        a.innerText = weapon;
+        weaponsDOM.appendChild(a);
+    });
     weaponsDOM.addEventListener('click', handleSelectWeapon);
 }
 
@@ -15,6 +21,9 @@ function handleSelectWeapon(e){
 
     playerA.weapon = playerAWeapon;
     playerB.weapon = playerBWeapon;
+
+    playerA.dom.className = playerA.weapon;
+    playerB.dom.className = playerB.weapon;
    
     const response = gameEngine.play(playerAWeapon, playerBWeapon);
 
@@ -23,6 +32,10 @@ function handleSelectWeapon(e){
     }else if(response.error){
         console.error(response.error);
     }
+}
+
+function getWeaponHashFromName(str){
+    return '#' + str;
 }
 
 function getWeaponNameFromHash(str){

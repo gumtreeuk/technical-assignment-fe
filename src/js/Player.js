@@ -1,15 +1,19 @@
-export default class Player{    
+export default class Player{
     constructor(selector, name){
-        this.domElement = document.getElementById(selector);
-        this._name = name;
-        this._weapon = null;
+        this.dom = document.getElementById(selector);
+        this.name = name;
+        this.weapon = '';
     }
 
-    set weapon(weapon){
-        this._weapon = weapon;
+    static set weapon(weapon){
+        return this._weapon = weapon;
     }
 
     static get weapon(){
         return this._weapon;
+    }
+
+    static get name(){
+        return this._name;
     }
 }

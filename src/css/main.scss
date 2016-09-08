@@ -1,0 +1,33 @@
+#weapons{
+	display: flex;
+	justify-content: space-around;
+	
+	a{
+		display: inline-block;
+		border: 1px solid black;
+		padding: 20px 40px;
+	}
+}
+
+#playerA, #playerB{
+	float: left;
+	width: 50%;
+	height: 400px;
+	background: #FFF center no-repeat;
+
+	&.rock{
+		background-image: url('../img/rock.png');
+	}
+
+	&.paper{
+		background-image: url('../img/paper.png');
+	}
+
+	&.scissor{
+		background-image: url('../img/scissor.png');
+	}
+}
+
+#playerA{
+	transform: scaleX(-1);
+}
