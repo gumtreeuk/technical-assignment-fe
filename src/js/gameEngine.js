@@ -16,6 +16,16 @@ export const results = {
 };
 
 /**
+ * results messages
+ * @type {Object}
+ */
+export const resultsMessage = {
+    'TIE': 'Tied',
+    'WIN': 'You win',
+    'LOSE': 'You lose'
+};
+
+/**
  * This function returns a random option from weapons 
  * @return {string}
  */
@@ -56,12 +66,15 @@ export function play(playerA, playerB){
     if(resultMatch == 0){ 
         // if the rest is 0 they put the same weapon
         response['result'] = results.TIE;
+        response['message'] = resultsMessage[results.TIE];
     }else if(resultMatch % 2 == 1){
         // if the rest is odd then playerA wins
         response['result'] = results.WIN;
+        response['message'] = resultsMessage[results.WIN];
     }else{
         // else playerB wins 
         response['result'] = results.LOSE;
+        response['message'] = resultsMessage[results.LOSE];
     }
 
     return response;

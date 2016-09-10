@@ -1,50 +1,64 @@
-#weapons{
-    display: flex;
-    justify-content: space-around;
-    
-    a{
-        display: inline-block;
-        border: 1px solid black;
-        padding: 20px 40px;
-    }
+body{
+    font: 1em/1 'Open Sans', sans-serif;
 }
 
-#playerA, #playerB{
+h1{
+    font-family: 'Bungee Shade', cursive;
+    text-align: center;
+    font-size: 3em;
+}
+
+h2{
+    text-align: center;
+    font-size: 2em;
+}
+
+.card-weapon{
     display: flex;
-    float: left;
-    width: 50%;
-    height: 400px;
+    position: relative;
+    width: 25%;
+    height: 140px;
+    margin: 0 10px;
+    border: 1px solid #000;
+    background: #FFF;
+    box-shadow: 3px 3px 0 1px #000;
+    cursor: pointer;
+    align-items: center;
     justify-content: center;
+    transition: margin 0.2s ease;
 
-    .card-weapon{
-        display: flex;
-        position: relative;
-        width: 100px;
-        height: 140px;
-        margin: 10px 10px 0;
-        border: 1px solid #000;
-        background: #FFF;
-        box-shadow: 3px 3px 0 1px #000;
-        cursor: pointer;
-        align-items: center;
-        justify-content: center;
+    img{
+        display: block;
+        width: 80%;
+        height: auto;
 
-        img{
-            display: block;
-            width: 80%;
-            height: auto;
-        }
-
-        &.selected{
-            margin-top: 0;
-        }
-    }
-}
-
-#playerA{
-    .card-weapon{
-        img{
+        #playerA &{
             transform: scaleX(-1);
         }
+    }
+
+    &.selected{
+        margin-bottom: 10px;
+    }
+}
+
+.result{
+    padding: 50px 0;
+    height: 1em;
+    font-size: 4em;
+    text-align: center;
+}
+
+.player{
+    float: left;
+    width: 50%;
+    text-align: center;
+
+    &-weapons{
+        display: flex;
+        width: 100%;
+        height: 200px;
+        justify-content: center;
+        align-items: flex-end;
     }
 }

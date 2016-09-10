@@ -1,8 +1,9 @@
 import * as gameEngine from './gameEngine'
 import Player from './Player'
 
-const playerA = new Player('playerA', 'playerA');
-const playerB = new Player('playerB', 'playerB');
+const result = document.getElementById('result');
+const playerA = new Player('playerA', 'You');
+const playerB = new Player('playerB', 'Computer');
 
 export default function setupGame(){
     playerA.dom.addEventListener('click', handleWeaponSelection);
@@ -23,7 +24,7 @@ function handleWeaponSelection(e){
     const response = gameEngine.play(playerAWeapon, playerBWeapon);
 
     if(response.result){
-        console.log(response);
+        result.innerText = response.message;
     }else if(response.error){
         console.error(response.error);
     }

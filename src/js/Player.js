@@ -1,9 +1,23 @@
 import * as gameEngine from './gameEngine'
 
+function _setDom(player){
+    const name = document.createElement('h3');
+    name.className = 'player-name';
+    name.innerText = player.name;
+
+    _setWeapons(player);
+
+    player.dom.appendChild(name);
+}
+
 function _setWeapons(player){
+    const div = document.createElement('div');
+
+    div.className = 'player-weapons';
+    
     gameEngine.weapons.forEach(weapon => {
-        let a = document.createElement('a');
-        let img = document.createElement('img');
+        const a = document.createElement('a');
+        const img = document.createElement('img');
 
         a.className = 'card-weapon ' + weapon;
         a.dataset.weapon = weapon;
@@ -14,9 +28,10 @@ function _setWeapons(player){
         img.alt = weapon;
 
         a.appendChild(img);
-
-        player.dom.appendChild(a);
+        div.appendChild(a);
     });
+    
+    player.dom.appendChild(div);
 }
 
 export default class Player{
@@ -25,7 +40,7 @@ export default class Player{
         this._name = name;
         this._weapon = '';
 
-        _setWeapons(this);
+        _setDom(this);
     }
 
     set weapon(weapon){

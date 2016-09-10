@@ -42,7 +42,7 @@ module.exports = {
 			exclude: [/node_modules/]
 		}],
 		loaders: [{
-			test: /\.(jpe?g|png|gif|svg)$/i, 
+			test: /\.(jpe?g|png|gif)$/i, 
 			loader: 'file?img?progressive=true'
 		},{
 			test: /\.css$/,
