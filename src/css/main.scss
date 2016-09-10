@@ -40,6 +40,24 @@ h2{
     &.selected{
         margin-bottom: 10px;
     }
+
+    #playerB &{
+        background: #CCC;
+        transition: transform 0.7s ease;
+
+        img{
+            display: none;
+        }
+
+        &.selected{
+            transform: rotateY(180deg); 
+            background: #FFF;
+
+            img{
+                display: block;
+            }
+        }
+    }
 }
 
 .result{
