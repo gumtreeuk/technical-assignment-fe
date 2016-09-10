@@ -5,25 +5,20 @@ const playerA = new Player('playerA', 'playerA');
 const playerB = new Player('playerB', 'playerB');
 
 export default function setupGame(){
-    const weaponsDOM = document.getElementById('weapons');
-    gameEngine.weapons.forEach(weapon => {
-        let a = document.createElement('a');
-        a.href = getWeaponHashFromName(weapon);
-        a.innerText = weapon;
-        weaponsDOM.appendChild(a);
-    });
-    weaponsDOM.addEventListener('click', handleSelectWeapon);
+    playerA.dom.addEventListener('click', handleWeaponSelection);
 }
 
-function handleSelectWeapon(e){
-    const playerAWeapon = getWeaponNameFromHash(e.target.href);
+function handleWeaponSelection(e){
+    if(!e.target.dataset.weapon) return;
+
+    const playerAWeapon = e.target.dataset.weapon;
     const playerBWeapon = gameEngine.getRandomWeapon();
 
     playerA.weapon = playerAWeapon;
     playerB.weapon = playerBWeapon;
 
-    playerA.dom.className = playerA.weapon;
-    playerB.dom.className = playerB.weapon;
+    setClassSelected(playerA, playerAWeapon);
+    setClassSelected(playerB, playerBWeapon);
    
     const response = gameEngine.play(playerAWeapon, playerBWeapon);
 
@@ -34,10 +29,12 @@ function handleSelectWeapon(e){
     }
 }
 
-function getWeaponHashFromName(str){
-    return '#' + str;
-}
+function setClassSelected(player, weapon){
+    var previousWeapon = player.dom.getElementsByClassName('selected');
 
-function getWeaponNameFromHash(str){
-    return str.substring(str.indexOf('#') + 1);
+    if(previousWeapon.length){
+        previousWeapon[0].classList.remove('selected');
+    }
+
+    player.dom.getElementsByClassName(weapon)[0].classList.add('selected');
 }

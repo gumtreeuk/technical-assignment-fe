@@ -1,33 +1,50 @@
 #weapons{
-	display: flex;
-	justify-content: space-around;
-	
-	a{
-		display: inline-block;
-		border: 1px solid black;
-		padding: 20px 40px;
-	}
+    display: flex;
+    justify-content: space-around;
+    
+    a{
+        display: inline-block;
+        border: 1px solid black;
+        padding: 20px 40px;
+    }
 }
 
 #playerA, #playerB{
-	float: left;
-	width: 50%;
-	height: 400px;
-	background: #FFF center no-repeat;
+    display: flex;
+    float: left;
+    width: 50%;
+    height: 400px;
+    justify-content: center;
 
-	&.rock{
-		background-image: url('../img/rock.png');
-	}
+    .card-weapon{
+        display: flex;
+        position: relative;
+        width: 100px;
+        height: 140px;
+        margin: 10px 10px 0;
+        border: 1px solid #000;
+        background: #FFF;
+        box-shadow: 3px 3px 0 1px #000;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
 
-	&.paper{
-		background-image: url('../img/paper.png');
-	}
+        img{
+            display: block;
+            width: 80%;
+            height: auto;
+        }
 
-	&.scissor{
-		background-image: url('../img/scissor.png');
-	}
+        &.selected{
+            margin-top: 0;
+        }
+    }
 }
 
 #playerA{
-	transform: scaleX(-1);
+    .card-weapon{
+        img{
+            transform: scaleX(-1);
+        }
+    }
 }

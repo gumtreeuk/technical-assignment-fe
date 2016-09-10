@@ -1,19 +1,46 @@
+import * as gameEngine from './gameEngine'
+
+function _setWeapons(player){
+    gameEngine.weapons.forEach(weapon => {
+        let a = document.createElement('a');
+        let img = document.createElement('img');
+
+        a.className = 'card-weapon ' + weapon;
+        a.dataset.weapon = weapon;
+        a.title = weapon;
+        
+        img.src = require('../img/' + weapon + '.png')
+        img.dataset.weapon = weapon;
+        img.alt = weapon;
+
+        a.appendChild(img);
+
+        player.dom.appendChild(a);
+    });
+}
+
 export default class Player{
     constructor(selector, name){
         this.dom = document.getElementById(selector);
-        this.name = name;
-        this.weapon = '';
+        this._name = name;
+        this._weapon = '';
+
+        _setWeapons(this);
     }
 
-    static set weapon(weapon){
+    set weapon(weapon){
         return this._weapon = weapon;
     }
 
-    static get weapon(){
+    get weapon(){
         return this._weapon;
     }
 
-    static get name(){
+    set name(name){
+        return this._name = name;
+    }
+
+    get name(){
         return this._name;
     }
 }
