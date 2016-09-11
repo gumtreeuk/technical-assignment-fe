@@ -1,5 +1,5 @@
 const path = require('path');
-
+const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -42,11 +42,14 @@ module.exports = {
 			exclude: [/node_modules/]
 		}],
 		loaders: [{
+			test: /\.(jpe?g|png|gif)$/i, 
+			loader: 'file?img?progressive=true'
+		},{
 			test: /\.css$/,
-			loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+			loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
 		},{
 			test: /\.scss$/,
-			loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+			loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader!postcss-loader')
 		},{
 			test: /\.js$/,
 			exclude: [/node_modules/],
@@ -55,5 +58,8 @@ module.exports = {
 	},
 	eslint: {
 		failOnError: true
-	}
+	},
+    postcss: function () {
+        return [autoprefixer];
+    }
 };
