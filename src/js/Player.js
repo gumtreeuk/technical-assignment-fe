@@ -1,5 +1,10 @@
 import * as gameEngine from './gameEngine'
 
+/**
+ * Build the DOM of a player
+ * Set name and weapons
+ * @param {Player object} player
+ */
 function _setDom(player){
     const name = document.createElement('h3');
     name.className = 'player-name';
@@ -10,16 +15,21 @@ function _setDom(player){
     player.dom.appendChild(name);
 }
 
+/**
+ * Build the DOM of weapons available
+ * @param {Player object} player
+ */
 function _setWeapons(player){
     const div = document.createElement('div');
 
-    div.className = 'player-weapons';
+    div.classList.add('player-weapons');
     
     gameEngine.weapons.forEach(weapon => {
         const a = document.createElement('a');
         const img = document.createElement('img');
 
-        a.className = 'card-weapon ' + weapon;
+        a.classList.toggle('hidden', !player.isHuman);
+        a.classList.add('card', weapon);
         a.dataset.weapon = weapon;
         a.title = weapon;
         
@@ -34,15 +44,26 @@ function _setWeapons(player){
     player.dom.appendChild(div);
 }
 
+/**
+ * Default class of a player
+ */
 export default class Player{
-    constructor(selector, name){
+    /**
+     * Create a instance of Player
+     * @param  {string} selector it is used to query by id in a DOM
+     * @param  {string} name     it is the Player name
+     * @param  {bool} isHuman    just to know :)
+     * @return {Player object}
+     */
+    constructor(selector, name, isHuman){
         this.dom = document.getElementById(selector);
         this._name = name;
+        this._isHuman = isHuman;
         this._weapon = '';
 
         _setDom(this);
     }
-
+    
     set weapon(weapon){
         return this._weapon = weapon;
     }
@@ -57,5 +78,13 @@ export default class Player{
 
     get name(){
         return this._name;
+    }
+
+    set isHuman(isHuman){
+        return this._isHuman = isHuman;
+    }
+
+    get isHuman(){
+        return this._isHuman;
     }
 }
