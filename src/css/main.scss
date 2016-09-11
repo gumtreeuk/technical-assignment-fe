@@ -69,7 +69,11 @@ p{
     box-shadow: 3px 3px 0 0 #000;
     transition: margin 0.2s ease;
     cursor: pointer;
-    z-index: 1;
+    z-index: 0;
+
+    &:nth-child(1){
+        z-index: 1;
+    }
 
     img{
         position: absolute;

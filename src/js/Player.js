@@ -56,14 +56,22 @@ export default class Player{
      * @return {Player object}
      */
     constructor(selector, name, isHuman){
-        this.dom = document.getElementById(selector);
+        this._dom = document.querySelector(selector);
         this._name = name;
         this._isHuman = isHuman;
         this._weapon = '';
 
         _setDom(this);
     }
+
+    set dom(dom){
+        return this._dom = dom;
+    }
     
+    get dom(){
+        return this._dom;
+    }
+
     set weapon(weapon){
         return this._weapon = weapon;
     }

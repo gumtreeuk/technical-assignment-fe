@@ -48,13 +48,13 @@ const result = document.getElementById('result');
  * Set playerA as game player
  * @type {Player}
  */
-const playerA = new Player('playerA', 'You', true);
+const playerA = new Player('#playerA', 'You', true);
 
 /**
  * Set playerB as a computer player 
  * @type {Player Object}
  */
-const playerB = new Player('playerB', 'Computer', false);
+const playerB = new Player('#playerB', 'Computer', false);
 
 /**
  * checks if browser supports touh events
@@ -105,6 +105,8 @@ export default function setupGame(){
 function handleKeyboardEvent(e){
     const key = e.which || e.keyCode;
 
+    if(playing) return;
+
     switch(key){
         case 39:
             selectWeapon(1);
@@ -152,6 +154,8 @@ function handleTouchMove(e){
  * Check if the touch movement is sufficiet to change weapon
  */
 function handleTouchEnd(){
+    if(playing) return;
+
     const diff = endEventX - startEventX;
 
     if(diff > minTouch){
@@ -169,8 +173,7 @@ function handleTouchEnd(){
  * @param  {Number} act defines +1 or -1 on idx, it represents next or previous
  */
 function selectWeapon(act){
-    const weapon = playerA.weapon || gameEngine.weapons[0];
-    let idx = gameEngine.weapons.indexOf(weapon) + act;
+    let idx = gameEngine.weapons.indexOf(playerA.weapon) + act;
 
     if(idx < 0){
         idx = gameEngine.weapons.length - 1;
