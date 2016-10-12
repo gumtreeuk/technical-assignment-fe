@@ -74,6 +74,11 @@ We hope you're already familiar with the CommonJS pattern that Node.js (and `web
 
 The `src/index.ejs` file is the template to generate `build/index.html` which `webpack` takes care of on the fly. You can add your markup to it as normal but please note, that the generated `main.css` and `main.js` is injected in by `webpack` into the `head` and `body` elements.
 
+### Submission
+
+Please clone the project and work within your own github repo. When you submit your finished assignment back to us please unsure that it is public so that the team can review your work. 
+
+
 Hope it all makes sense, we're looking forward to your solution, happy coding! :)
 
 *The Gumtree UK dev team*
