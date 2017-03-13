@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+
+.player-action--rock {
+  background-image: url("../../styles/images/rock.svg");
+  background-position-x: 5px;
+  opacity: 1;
+}
+
+.player-action--paper {
+  background-image: url("../../styles/images/paper.svg");
+  background-position-x: 5px;
+  background-position-y: 4px;
+}
+
+.player-action--scissors {
+  background-image: url("../../styles/images/scissors.svg");
+  background-position-x: 6px;
+  background-position-y: 4px;
+}
+
+.computer-action {
+  background-image: url("../../styles/images/computer.svg");
+  background-color: $primary-color;
+  border-radius: 999em;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position-x: 5px;
+  background-position-y: 4px;
+}

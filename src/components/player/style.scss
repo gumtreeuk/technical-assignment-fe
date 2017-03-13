@@ -1,0 +1,140 @@
+@import '../../styles/variables';
+
+.player {
+  display: inline-block;
+}
+
+.player-wins {
+  background-color: $green;
+  position: relative;
+  top: 65px;
+  left: 39px;
+}
+
+.stars {
+  background: $green;
+  width: 40px;
+  height: 40px;
+  top: 60px;
+  left: 75px;
+  position: relative;
+}
+
+.stars:before, .stars:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background: $green;
+}
+
+.stars:before {
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+}
+
+.stars:after {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+}
+
+.wins-count{
+  position: absolute;
+  top: 63px;
+  left: 75px;
+  -moz-padding-start: 0;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: white;
+  display: block;
+  width: 40px;
+}
+
+.player-icon {
+  background-color: $secondary-color;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  line-height: 1;
+  font-size: 36px;
+  position: relative;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+}
+
+.player-icon--rock {
+  background-image: url("../../styles/images/rock.svg");
+  background-position-x: 11px;
+}
+
+.player-icon--paper {
+  background-image: url("../../styles/images/paper.svg");
+  background-position-x: 11px;
+  background-position-y: 9px;
+}
+
+.player-icon--scissors {
+  background-image: url("../../styles/images/scissors.svg");
+  background-position-x: 13px;
+  background-position-y: 8px;
+}
+
+.player-icon--winner {
+  background-color: rgba($green, 0.6);
+}
+
+.player--two {
+  margin-top: 20px;
+}
+
+.player-action {
+  background-color: $primary-color;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.player-icon--selected {
+  opacity: 1;
+}
+
+.game-reload {
+  background-image: url("../../styles/images/reload.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 56px;
+  height: 56px;
+  background-color: $theme-grey-light;
+  border-radius: 999em;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  display: inline-block;
+  margin-bottom: 42px;
+  position:fixed;
+  left:50%;
+  top:50%;
+  z-index:100000;
+}
+
+.replay-modal {
+  position:fixed;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:100%;
+  background:#000;
+  opacity:0.5;
+  z-index:99999;
+}

@@ -61,9 +61,18 @@ module.exports = {
 				use: ['css-loader', 'sass-loader']
 			})
 		},{
-			test: /\.js$/,
-			exclude: [/node_modules/],
-			use: 'babel-loader'
-		}]
+			test: /\.(jpe?g|png|gif|svg)$/i,
+			use: [
+				{
+					loader: 'file-loader',
+				},
+				'image-webpack-loader'
+			]
+		}
+			,{
+				test: /\.js$/,
+				exclude: [/node_modules/],
+				use: 'babel-loader'
+			}]
 	}
 };
