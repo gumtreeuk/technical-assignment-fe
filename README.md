@@ -1,4 +1,4 @@
-# Gumtree UK frontend developer test
+# Technical Assignment for Frontend
 
 ## User Story
 
