@@ -22,7 +22,7 @@
     "babel": "^6.23.0",
     "babel-core": "^7.0.0-0",
     "babel-loader": "^8.0.5",
-    "chai": "^3.5.0",
+    "chai": "^4.2.0",
     "css-loader": "^2.1.1",
     "eslint": "5.15.2",
     "eslint-loader": "^2.1.2",
