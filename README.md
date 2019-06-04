@@ -86,7 +86,7 @@ The `src/index.ejs` file is the template to generate `build/index.html` which `w
 
 ### Submission
 
-Please clone the project and work within your own github repo. When you submit your finished assignment back to us please unsure that it is public so that the team can review your work. 
+Please clone the project and work within your own github repo. When you submit your finished assignment back to us please ensure that it is public so that the team can review your work. 
 
 
 Hope it all makes sense, we're looking forward to your solution, happy coding! :)
