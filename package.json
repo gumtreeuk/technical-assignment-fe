@@ -41,7 +41,7 @@
     "karma-webpack": "^2.0.2",
     "mocha": "^4.0.0",
     "node-sass": "^4.11.0",
-    "sass-loader": "^6.0.2",
+    "sass-loader": "^7.1.0",
     "style-loader": "^0.13.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
