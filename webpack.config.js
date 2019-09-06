@@ -18,7 +18,7 @@ module.exports = {
 		extensions: ['.js']
 	},
 	entry: {
-		'main': './src/js/main.js'
+		index: ["./src/js/index.js"]
 	},
 	output: {
 		path: path.join(process.cwd(), 'build'),

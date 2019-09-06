@@ -1,4 +1,4 @@
-require('../css/main.scss');
+require('../css/index.scss');
 
 import print from './module';
 
