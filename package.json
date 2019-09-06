@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "karma start karma.config.js --no-single-run",
-    "dev": "webpack-dev-server --content-base build/",
+    "dev": "webpack-dev-server --content-base build/ --mode development",
     "build": "webpack",
     "serve": "http-server -p 8000 build/",
     "lint": "eslint . --ext .js"

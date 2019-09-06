@@ -1,5 +1,5 @@
-require('../css/index.scss');
+import logger from './logger';
 
-import print from './module';
+import '../css/index.scss';
 
-print('it works well!');
+logger('it works well!');
