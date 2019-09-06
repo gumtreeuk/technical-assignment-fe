@@ -1,69 +1,56 @@
-const path = require('path');
+const path = require("path");
 
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 	cache: true,
-	context: process.cwd(),
-	devtool: 'source-map',
+	devtool: "source-map",
 	devServer: {
-		inline: true,
-		port: 3333
+		inline: true
 	},
 	resolve: {
-		modules: [
-			path.resolve('./node_modules')
-		],
-		extensions: ['.js']
+		extensions: [".js"]
 	},
 	entry: {
-		'main': './src/js/main.js'
+		index: ["./src/js/index.js"]
 	},
 	output: {
-		path: path.join(process.cwd(), 'build'),
-		filename: '[name].js',
-		sourceMapFilename: '[file].map'
+		path: path.resolve(__dirname, "build"),
+		filename: "[name].js",
+		sourceMapFilename: "[file].map"
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: 'src/index.ejs'
+			template: path.join(__dirname, "public", "index.html"),
+			favicon: path.resolve(__dirname, "public", "favicon.ico")
 		}),
-		new ExtractTextPlugin({
-			filename: '[name].css'
-		}),
-		new webpack.LoaderOptionsPlugin({
-			debug: true
+		new MiniCssExtractPlugin({
+			filename: "[name].css"
 		})
 	],
 	module: {
-		rules: [{
-			enforce: 'pre',
-			test: /\.js$/,
-			use: {
-				loader: 'eslint-loader',
-				options: {
-					failOnError: true
-				}
+		rules: [
+			{
+				test: /\.s?css$/,
+				use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
 			},
-			exclude: [/node_modules/]
-		},{
-			test: /\.css$/,
-			use: ExtractTextPlugin.extract({
-				fallback: 'style-loader',
-				use: 'css-loader'
-			})
-		},{
-			test: /\.scss$/,
-			use: ExtractTextPlugin.extract({
-				fallback: 'style-loader',
-				use: ['css-loader', 'sass-loader']
-			})
-		},{
-			test: /\.js$/,
-			exclude: [/node_modules/],
-			use: 'babel-loader'
-		}]
+			{
+				test: /\.js$/,
+				exclude: [/node_modules/],
+				use: ["babel-loader", "eslint-loader"]
+			},
+			{
+				test: /\.(png|jpg|gif)$/i,
+				use: [
+					{
+						loader: "url-loader",
+						options: {
+							limit: 8192
+						}
+					}
+				]
+			}
+		]
 	}
 };
