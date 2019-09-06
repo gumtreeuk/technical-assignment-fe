@@ -6,22 +6,18 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 	cache: true,
-	context: process.cwd(),
 	devtool: 'source-map',
 	devServer: {
 		inline: true,
 	},
 	resolve: {
-		modules: [
-			path.resolve('./node_modules')
-		],
 		extensions: ['.js']
 	},
 	entry: {
 		index: ["./src/js/index.js"]
 	},
 	output: {
-		path: path.join(process.cwd(), 'build'),
+		path: path.resolve(__dirname, "build"),
 		filename: '[name].js',
 		sourceMapFilename: '[file].map'
 	},
@@ -39,25 +35,12 @@ module.exports = {
 	],
 	module: {
 		rules: [{
-			enforce: 'pre',
-			test: /\.js$/,
-			use: {
-				loader: 'eslint-loader',
-				options: {
-					failOnError: true
-				}
-			},
-			exclude: [/node_modules/]
-		},{
-			test: /\.css$/,
-			use: [MiniCssExtractPlugin.loader,'css-loader']
-		},{
-			test: /\.scss$/,
+			test: /\.s?css$/,
 			use: [MiniCssExtractPlugin.loader,'css-loader', 'sass-loader']
 		},{
 			test: /\.js$/,
 			exclude: [/node_modules/],
-			use: 'babel-loader'
+			use: ['babel-loader', 'eslint-loader']
 		}]
 	}
 };
