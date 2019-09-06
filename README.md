@@ -46,7 +46,7 @@ The tooling we provide is the following:
 
 ### Install dependencies
 
-To start developing, fork and clone the project first, then make sure you have Node.js *4.x* or higher.
+To start developing, fork and clone the project first, then make sure you have Node.js *10.x* or higher.
 
 You'll need `yarn` to install the dependencies we locked in via the `yarn.lock` checked in to this repo.
 
@@ -76,7 +76,7 @@ We've added a few example files under the `src/` folder as a sanity check that t
 
 When you first run `yarn run dev` and open the project in the browser at the given url, you should see a text saying *"you are ready to go!"* in white on a green background and *"it works well!"* in the browser's console.
 
-We hope you're already familiar with the ESMAScript modules. You'll see some examples in the provided files under the `src/js/` folder.
+We hope you're already familiar with the ECMAScript modules. You'll see some examples in the provided files under the `src/js/` folder.
 
 The `public/index.html` file is the template which `webpack` takes care of on the fly. You can add your markup to it as normal but please note, that the generated `index.css` and `index.js` is injected in by `webpack` into the `head` and `body` elements.
 
