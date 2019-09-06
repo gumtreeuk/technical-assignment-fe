@@ -8,9 +8,9 @@ describe('example module', () => {
 		const originalConsoleLog = console.log;
 		const fakeConsoleLog = message => consoleLogWasCalledWith = message;
 		console.log = fakeConsoleLog;
-		// excersise
+		// exercise
 		print('some message');
-		expect(consoleLogWasCalledWith).to.equal('some message');
+		expect(consoleLogWasCalledWith).toMatch('some message');
 		// teardown
 		console.log = originalConsoleLog;
 	});
