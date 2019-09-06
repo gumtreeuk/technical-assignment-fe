@@ -2973,6 +2973,14 @@ file-entry-cache@^5.0.1:
   dependencies:
     flat-cache "^2.0.1"
 
+file-loader@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-4.2.0.tgz#5fb124d2369d7075d70a9a5abecd12e60a95215e"
+  integrity sha512-+xZnaK5R8kBJrHK0/6HRlrKNamvVS5rjyuju+rnyxRGuwUJwpAMsVzUl5dz6rK8brkzjV6JpcFNjp6NqV0g1OQ==
+  dependencies:
+    loader-utils "^1.2.3"
+    schema-utils "^2.0.0"
+
 fill-range@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-4.0.0.tgz#d544811d428f98eb06a63dc402d2403c328c38f7"
@@ -4880,6 +4888,11 @@ mime@^2.4.2:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/mime/-/mime-2.4.3.tgz#229687331e86f68924e6cb59e1cdd937f18275fe"
   integrity sha512-QgrPRJfE+riq5TPZMcHZOtm8c6K/yYrMbKIoRfapfiGLxS8OTeIfRhUGW5LU7MlRa52KOAGCfUNruqLrIBvWZw==
+
+mime@^2.4.4:
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/mime/-/mime-2.4.4.tgz#bd7b91135fc6b01cde3e9bae33d659b63d8857e5"
+  integrity sha512-LRxmNwziLPT828z+4YkNzloCFC2YM4wrB99k+AV5ZbEyfGNWfG8SO1FUXLmLDBSo89NrJZ4DIWeLjy1CHGhMGA==
 
 mimic-fn@^1.0.0:
   version "1.2.0"
@@ -7389,6 +7402,15 @@ url-join@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/url-join/-/url-join-2.0.5.tgz#5af22f18c052a000a48d7b82c5e9c2e2feeda728"
   integrity sha1-WvIvGMBSoACkjXuCxenC4v7tpyg=
+
+url-loader@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/url-loader/-/url-loader-2.1.0.tgz#bcc1ecabbd197e913eca23f5e0378e24b4412961"
+  integrity sha512-kVrp/8VfEm5fUt+fl2E0FQyrpmOYgMEkBsv8+UDP1wFhszECq5JyGF33I7cajlVY90zRZ6MyfgKXngLvHYZX8A==
+  dependencies:
+    loader-utils "^1.2.3"
+    mime "^2.4.4"
+    schema-utils "^2.0.0"
 
 url-parse@^1.4.3:
   version "1.4.7"
