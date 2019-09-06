@@ -1,4 +1,4 @@
-import print from '../src/js/module';
+import print from '../src/js/logger';
 
 describe('example module', () => {
 
