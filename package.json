@@ -21,7 +21,7 @@
     "@babel/preset-env": "7.5.5",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.5",
-    "core-js": "^3.2.1",
+    "core-js": "^3.3.5",
     "css-loader": "^3.2.0",
     "eslint": "6.3.0",
     "eslint-loader": "^2.2.1",
