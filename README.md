@@ -14,10 +14,10 @@ The goal of this task is to create a version of the game 'Rock, Paper Scissors' 
 ## Technical Requirements
 You should:
 
-- Support IE11
-- Use vanilla JavaScript
+- Support multiple browsers
+- Use vanilla JavaScript or Typescript
 - Write unit tests
-- Use modern styling and features, e.g. SASS
+- Use modern styling and features, e.g. SASS, CSS in JS, etc.
 - Use only ES2015+ syntax
 - Use Semantic HTML
 
