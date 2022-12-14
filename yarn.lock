@@ -3514,10 +3514,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.16.0":
-  version: 3.16.0
-  resolution: "core-js@npm:3.16.0"
-  checksum: e215cf057fadd86e5386d8042c1bd0ddab1c7811d8f66d272c356ba9bae34c0897c3f5a80d19f93fd74cff832652354a0feb0c817234a066ae9177e28c6d865a
+"core-js@npm:^3.26.1":
+  version: 3.26.1
+  resolution: "core-js@npm:3.26.1"
+  checksum: 0a01149f51ff1e9f41d1ea49cc4c9222047949ea597189ede7c4cf8cde3b097766b9c7615acc77c86fe65b4002f20b638a133dfba7b41dba830d707aeeed45ad
   languageName: node
   linkType: hard
 
@@ -4945,7 +4945,7 @@ __metadata:
     "@babel/preset-env": 7.20.2
     babel-eslint: ^10.0.3
     babel-loader: ^8.0.5
-    core-js: ^3.16.0
+    core-js: ^3.26.1
     css-loader: ^3.2.0
     eslint: 6.8.0
     eslint-loader: ^4.0.2
