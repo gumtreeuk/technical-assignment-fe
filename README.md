@@ -1,4 +1,4 @@
-# Gumtree Frontend Challenge
+# Gumtree Front End Challenge
 
 ## User Story
 The goal of this task is to create a version of the game 'Rock, Paper Scissors' in the browser.
@@ -15,7 +15,7 @@ The goal of this task is to create a version of the game 'Rock, Paper Scissors' 
 You should:
 
 - Support multiple browsers
-- Use vanilla JavaScript or Typescript
+- Use vanilla JavaScript or Typescript (though please feel free to use additional libraries in solving the problem, based on your understanding of the role requirements)
 - Write unit tests
 - Use modern styling and features, e.g. SASS, CSS in JS, etc.
 - Use only ES2015+ syntax
