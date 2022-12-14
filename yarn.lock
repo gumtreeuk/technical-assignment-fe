@@ -5267,7 +5267,7 @@ __metadata:
     jest: ^29.3.1
     mini-css-extract-plugin: ^1.6.2
     node-sass: ^6.0.1
-    regenerator-runtime: ^0.13.3
+    regenerator-runtime: ^0.13.11
     sass-loader: ^10.2.0
     style-loader: ^2.0.0
     url-loader: ^4.1.1
@@ -9278,13 +9278,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.13.3":
-  version: 0.13.3
-  resolution: "regenerator-runtime@npm:0.13.3"
-  checksum: 3d3dd091db39e9d7d1eedec811d8272f1a9b0d52ca047a800ffe9b90e289b002ca3d84bcb09fa849f41c4e8e8178ec246b0fb5f9f999a64cd7247986ea02d3bd
-  languageName: node
-  linkType: hard
-
 "regenerator-transform@npm:^0.15.1":
   version: 0.15.1
   resolution: "regenerator-transform@npm:0.15.1"
@@ -9726,7 +9719,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"schema-utils@npm:^2.0.0, schema-utils@npm:^2.6.5":
+"schema-utils@npm:^2.6.5":
   version: 2.6.6
   resolution: "schema-utils@npm:2.6.6"
   dependencies:
