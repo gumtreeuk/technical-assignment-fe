@@ -37,7 +37,7 @@
     "webpack": "^4.41.5",
     "webpack-cli": "^5.0.1",
     "webpack-core": "^0.6.9",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^4.11.1"
   },
   "license": "UNLICENSED"
 }
