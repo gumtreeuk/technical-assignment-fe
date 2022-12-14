@@ -2874,18 +2874,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-loader@npm:^8.0.5":
-  version: 8.0.6
-  resolution: "babel-loader@npm:8.0.6"
+"babel-loader@npm:^8.3.0":
+  version: 8.3.0
+  resolution: "babel-loader@npm:8.3.0"
   dependencies:
-    find-cache-dir: ^2.0.0
-    loader-utils: ^1.0.2
-    mkdirp: ^0.5.1
-    pify: ^4.0.1
+    find-cache-dir: ^3.3.1
+    loader-utils: ^2.0.0
+    make-dir: ^3.1.0
+    schema-utils: ^2.6.5
   peerDependencies:
     "@babel/core": ^7.0.0
     webpack: ">=2"
-  checksum: 1da4c77e6fb5d18beb4fbaaca415dd188aecf8d62cf1ab7b794e1447fbda232a95947645652ce30ebebc835782fde2856c346e04185b942adc2d21327588fdd5
+  checksum: d48bcf9e030e598656ad3ff5fb85967db2eaaf38af5b4a4b99d25618a2057f9f100e6b231af2a46c1913206db506115ca7a8cbdf52c9c73d767070dae4352ab5
   languageName: node
   linkType: hard
 
@@ -5116,7 +5116,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-cache-dir@npm:^2.0.0, find-cache-dir@npm:^2.1.0":
+"find-cache-dir@npm:^2.1.0":
   version: 2.1.0
   resolution: "find-cache-dir@npm:2.1.0"
   dependencies:
@@ -5257,7 +5257,7 @@ __metadata:
     "@babel/core": 7.20.5
     "@babel/preset-env": 7.20.2
     babel-eslint: ^10.0.3
-    babel-loader: ^8.0.5
+    babel-loader: ^8.3.0
     core-js: ^3.26.1
     css-loader: ^5.2.7
     eslint: 6.8.0
@@ -7283,7 +7283,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loader-utils@npm:^1.0.2, loader-utils@npm:^1.2.3":
+"loader-utils@npm:^1.2.3":
   version: 1.2.3
   resolution: "loader-utils@npm:1.2.3"
   dependencies:
@@ -7382,7 +7382,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"make-dir@npm:^3.0.0, make-dir@npm:^3.0.2":
+"make-dir@npm:^3.0.0, make-dir@npm:^3.0.2, make-dir@npm:^3.1.0":
   version: 3.1.0
   resolution: "make-dir@npm:3.1.0"
   dependencies:
