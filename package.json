@@ -19,7 +19,7 @@
   "devDependencies": {
     "@babel/core": "7.20.5",
     "@babel/preset-env": "7.20.2",
-    "babel-eslint": "^10.0.3",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.3.0",
     "core-js": "^3.26.1",
     "css-loader": "^5.2.7",
