@@ -5129,7 +5129,7 @@ __metadata:
     node-sass: ^6.0.1
     regenerator-runtime: ^0.13.3
     sass-loader: ^10.2.0
-    style-loader: ^1.0.0
+    style-loader: ^2.0.0
     url-loader: ^4.1.1
     webpack: ^4.41.5
     webpack-cli: ^5.0.1
@@ -9887,7 +9887,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"schema-utils@npm:^2.0.0, schema-utils@npm:^2.0.1, schema-utils@npm:^2.6.5":
+"schema-utils@npm:^2.0.0, schema-utils@npm:^2.6.5":
   version: 2.6.6
   resolution: "schema-utils@npm:2.6.6"
   dependencies:
@@ -10719,15 +10719,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-loader@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "style-loader@npm:1.0.0"
+"style-loader@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "style-loader@npm:2.0.0"
   dependencies:
-    loader-utils: ^1.2.3
-    schema-utils: ^2.0.1
+    loader-utils: ^2.0.0
+    schema-utils: ^3.0.0
   peerDependencies:
-    webpack: ^4.0.0
-  checksum: 94102cb07996176456d72615f4b580c3d8854c80e47e31d6e806996993cb6485bf60de96cb2ac5826ee91c251a8f3858171b6ddff41d2accc0ef4ed6df9fb232
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: 21425246a5a8f14d1625a657a3a56f8a323193fa341a71af818a2ed2a429efa2385a328b4381cf2f12c2d0e6380801eb9e0427ed9c3a10ff95c86e383184d632
   languageName: node
   linkType: hard
 
