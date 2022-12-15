@@ -2528,13 +2528,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"amdefine@npm:>=0.0.4":
-  version: 1.0.1
-  resolution: "amdefine@npm:1.0.1"
-  checksum: 9d4e15b94641643a9385b2841b4cb2bcf4e8e2f741ea4bd475c93ad7bab261ad4ed827a32e9c549b38b98759c4526c173ae4e6dde8caeb75ee5cebedc9863762
-  languageName: node
-  linkType: hard
-
 "ansi-escapes@npm:^4.2.1":
   version: 4.2.1
   resolution: "ansi-escapes@npm:4.2.1"
@@ -4224,7 +4217,6 @@ __metadata:
     sass-loader: ^13.2.0
     webpack: ^5.75.0
     webpack-cli: ^5.0.1
-    webpack-core: ^0.6.9
     webpack-dev-server: ^4.11.1
   languageName: unknown
   linkType: soft
@@ -7530,13 +7522,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-list-map@npm:~0.1.7":
-  version: 0.1.8
-  resolution: "source-list-map@npm:0.1.8"
-  checksum: 2726e1f2273757e1cea395def08c1cb03fba00ef3d6fab2c916353fc5b7ba6d3db4b68e5fb509058e1603fca047edbae85db081caed3b8e235d52185c401a4a1
-  languageName: node
-  linkType: hard
-
 "source-map-js@npm:^1.0.2":
   version: 1.0.2
   resolution: "source-map-js@npm:1.0.2"
@@ -7575,15 +7560,6 @@ __metadata:
   version: 0.7.4
   resolution: "source-map@npm:0.7.4"
   checksum: 01cc5a74b1f0e1d626a58d36ad6898ea820567e87f18dfc9d24a9843a351aaa2ec09b87422589906d6ff1deed29693e176194dc88bcae7c9a852dc74b311dbf5
-  languageName: node
-  linkType: hard
-
-"source-map@npm:~0.4.1":
-  version: 0.4.4
-  resolution: "source-map@npm:0.4.4"
-  dependencies:
-    amdefine: ">=0.0.4"
-  checksum: b31992fcb4a2a6c335617f187bd36f392896dfcc111830ebdb8b716923cf6554b665833b975fc998bdf3a63881b2c8b4c5c34fda0280357b8c18fe6aa5d148ea
   languageName: node
   linkType: hard
 
@@ -8271,16 +8247,6 @@ __metadata:
   bin:
     webpack-cli: bin/cli.js
   checksum: b1544eea669442e78c3dba9f79c0f8d0136759b8b2fe9cd32c0d410250fd719988ae037778ba88993215d44971169f2c268c0c934068be561711615f1951bd53
-  languageName: node
-  linkType: hard
-
-"webpack-core@npm:^0.6.9":
-  version: 0.6.9
-  resolution: "webpack-core@npm:0.6.9"
-  dependencies:
-    source-list-map: ~0.1.7
-    source-map: ~0.4.1
-  checksum: 08bf9f88ceaf2f427db6f711118d2f6cafa7b208c4eaca1e0d639a8c5fbb7c1afe6c449c23d3ec458ce703a0525f3625aff0471b74df9efd3a854af012c0adcd
   languageName: node
   linkType: hard
 
