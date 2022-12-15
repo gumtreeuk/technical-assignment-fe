@@ -2,12 +2,13 @@ const path = require("path");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = {
 	cache: true,
 	devtool: "source-map",
 	devServer: {
-		inline: true
+		static: './'
 	},
 	resolve: {
 		extensions: [".js"]
@@ -27,7 +28,8 @@ module.exports = {
 		}),
 		new MiniCssExtractPlugin({
 			filename: "[name].css"
-		})
+		}),
+		new ESLintPlugin()
 	],
 	module: {
 		rules: [
@@ -38,7 +40,7 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: [/node_modules/],
-				use: ["babel-loader", "eslint-loader"]
+				use: ["babel-loader"]
 			},
 			{
 				test: /\.(png|jpg|gif)$/i,
